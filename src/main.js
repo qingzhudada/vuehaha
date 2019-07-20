@@ -6,11 +6,20 @@ import Vue from "vue"
 import VueResource from 'vue-resource'
 // 安装 vue-resource
 Vue.use(VueResource)
+    // 设置请求的根路径
+Vue.http.options.root = 'http://www.liulongbin.top:3005';
 
 // 导入路由
 import VueRouter from "vue-router"
 // 创建路由中间件
 Vue.use(VueRouter)
+
+// 导入格式化时间的插件
+import moment from 'moment'
+// 定义全局的过滤器
+Vue.filter('dateFormat', function(dataStr, pattern = "YYYY-MM-DD HH:mm:ss") {
+    return moment(dataStr).format(pattern)
+})
 
 
 
