@@ -1,4 +1,4 @@
-<template>
+<template scoped>
       <div class="cmt-container">
             <h3>发表评论</h3>
             <textarea placeholder="请输入要吐槽的内容(最多不超过十个字)" maxlength="10" v-model="msg"></textarea>
@@ -19,7 +19,7 @@
 
 
 
-<script>
+<script scoped>
 import { Toast } from "mint-ui";
 import { log } from 'util';
 

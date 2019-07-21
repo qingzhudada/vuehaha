@@ -12,7 +12,10 @@ import newsList from "./components/news/news_list.vue"
 import newsInfo from "./components/news/news_info.vue"
 // 导入图片列表路由组件
 import photos from "./components/photos/Photolist.vue"
-
+// 导入图片的详情页面路由组价
+import photoInfos from "./components/photos/PhotoInfo.vue"
+// 导入商品购物列表路由组件
+import goods from "./components/goots/goodslist.vue"
 
 // 创建路由对象 跳转到相对应的路由组件
 var router = new VueRouter({
@@ -49,6 +52,14 @@ var router = new VueRouter({
         {
             path: "/photo",
             component: photos
+        },
+        {
+            path: "/photoinfo/:id",
+            component: photoInfos
+        },
+        {
+            path: "/good",
+            component: goods
         }
     ],
     linkActiveClass: "mui-active" //覆盖默认路由高亮的类,默认为router-link-active

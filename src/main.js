@@ -30,7 +30,9 @@ import "./lib/mui/css/icons-extra.css"
 
 
 // 导入mint-UI文件
-import { Header, Button, Swipe, SwipeItem } from 'mint-ui';
+import { Header, Button, Swipe, SwipeItem, Lazyload } from 'mint-ui';
+// 懒加载
+Vue.use(Lazyload);
 // 注册轮播图
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
@@ -38,6 +40,14 @@ Vue.component(SwipeItem.name, SwipeItem);
 Vue.component(Header.name, Header);
 // 注册Button
 Vue.component(Button.name, Button);
+// import Mint from 'mint-ui';
+// Vue.use(Mint);
+
+// 缩略图
+import VuePreview from 'vue-preview'
+// 
+Vue.use(VuePreview)
+
 
 
 //导入路由模块 

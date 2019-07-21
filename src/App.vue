@@ -32,14 +32,22 @@
 
 
 <script>
+import mui from "../src/lib/mui/js/mui.js"
+mui("body").on('tap','a',function(){
+	mui.openWindow({url:this.href})
+	})
 export default {
-    
+
 }
 </script>
 
 
 
 <style lang="less" scoped>
+.mint-header{
+	background: linear-gradient(45deg, rgb(107, 122, 252), #7AFFAF);
+	z-index: 99999;
+}
 .app-container {
   padding-top: 40px;
   padding-bottom: 40px;
