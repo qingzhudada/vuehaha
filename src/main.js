@@ -6,7 +6,7 @@ import Vue from "vue"
 import VueResource from 'vue-resource'
 // 安装 vue-resource
 Vue.use(VueResource)
-    // 设置请求的根路径
+// 设置请求的根路径
 Vue.http.options.root = 'http://www.liulongbin.top:3005';
 
 // 导入路由
@@ -26,6 +26,7 @@ Vue.filter('dateFormat', function(dataStr, pattern = "YYYY-MM-DD HH:mm:ss") {
 //引入需要的css
 import "./lib/mui/css/mui.css"
 import "./lib/mui/css/icons-extra.css"
+
 
 
 

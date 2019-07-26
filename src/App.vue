@@ -17,7 +17,7 @@
 			</router-link>
 			<router-link class="mui-tab-item" to="/shopcar">
 				<span class="mui-icon mui-icon-extra  mui-icon-extra-cart">
-                    <span class="mui-badge">0</span>
+                    <span class="mui-badge" id="badge">0</span>
                 </span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
@@ -32,13 +32,14 @@
 
 
 <script>
-import mui from "../src/lib/mui/js/mui.js"
-mui("body").on('tap','a',function(){
-	mui.openWindow({url:this.href})
+	import mui from "./lib/mui/js/mui.js"
+	 
+	mui("body").on('tap','a',function(){
+		mui.openWindow({url:this.href})
 	})
-export default {
+	export default {
 
-}
+	}
 </script>
 
 

@@ -15,7 +15,13 @@ import photos from "./components/photos/Photolist.vue"
 // 导入图片的详情页面路由组价
 import photoInfos from "./components/photos/PhotoInfo.vue"
 // 导入商品购物列表路由组件
-import goods from "./components/goots/goodslist.vue"
+import goods from "./components/goots/goodlist.vue"
+// 导入商品购物列表路由组件
+import goodinfos from "./components/goots/goodinfo.vue"
+// 导入商品购物列表中的图文详情路由组件
+import gooddescs from "./components/goots/gooddesc.vue"
+// 导入商品购物列表中的评论路由组件
+import goodcomments from "./components/goots/goodcomment.vue"
 
 // 创建路由对象 跳转到相对应的路由组件
 var router = new VueRouter({
@@ -60,6 +66,21 @@ var router = new VueRouter({
         {
             path: "/good",
             component: goods
+        },
+        {
+            path: "/goodinfo/:id",
+            component: goodinfos,
+            name:"goodinfos"
+        },
+        {
+            path: "/getdesc/:id",
+            component: gooddescs,
+            name:"gooddescs"
+        },
+        {
+            path: "/goodcomment/:id",
+            component: goodcomments,
+            name:"goodcomments"
         }
     ],
     linkActiveClass: "mui-active" //覆盖默认路由高亮的类,默认为router-link-active
